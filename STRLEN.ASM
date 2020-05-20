@@ -14,7 +14,7 @@ Start:		mov di, offset Msg
 ;		di - address of line
 ;Result:	cx - count of symbols in line (without
 ;			last symbol = 0) 
-;Destroy:	ax, di
+;Destroy:	al, di
 ;-------------------------------------------------
 strlen		proc
 
