@@ -33,9 +33,11 @@ strrchr		proc
 		sub cx, bx
 
 		std
+		inc cx
 		mov al, byte ptr [Symb]
 		repne scasb
 		inc di
+		jcxz @@ThatAll
 
 		cld
 		jmp @@En
