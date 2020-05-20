@@ -15,7 +15,7 @@ Start:		mov di, offset Msg
 ;Result:	df = 0
 ;		di - address of last symbol, which is equal
 ;			symbol which we find
-;Destroy:	cx, al
+;Destroy:	cx, al, bx
 ;-------------------------------------------------
 strrchr		proc
 
