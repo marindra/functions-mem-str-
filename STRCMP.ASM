@@ -18,7 +18,7 @@ Msg3:	db 'I AM BIGGER!', 0
 ;		di - address of second line
 ;Result:	al - difference between first different symbols
 ;			or 0 if they are equal
-;Destroy:	bx, di
+;Destroy:	bx, di, dl
 ;-------------------------------------------------
 strcmp		proc
 do:		mov al, byte ptr [bx]
