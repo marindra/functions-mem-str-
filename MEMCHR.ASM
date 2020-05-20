@@ -24,17 +24,18 @@ Start:		mov ax, ds
 ;-------------------------------------------------
 memchr		Proc
 
+		inc cx
 		cld
 		repne scasb
 		dec di
-		cmp byte ptr es:[di], al
-		je @@Next
+		cmp cx, 0
+		jnz @@Next
 
 		mov di, 0h
 
 @@Next:		Ret
 		endp
 
-Msg:		db 'Abcde$'
+Msg:		db 'bcdeA$'
 
 end		Start
